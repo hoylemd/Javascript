@@ -4,16 +4,16 @@ var fizzBuzz =
 {
 
 	rules : {
-		{"divisor": 3, "message": "Fizz"},
-		{"divisor": 5, "message": "Buzz"}
+		0 :{"divisor": 3, "message": "Fizz"},
+		1 :{"divisor": 5, "message": "Buzz"}
 	},
 
 	test : function(sample)
 	{
 		var output = "";
-		for var ruleNum in rules
+		for (var ruleNum in this.rules)
 		{ 
-			var rule = rules;
+			var rule = this.rules[ruleNum];
 			if (!(sample % rule["divisor"]))
 			{
 				output += rule["message"];
